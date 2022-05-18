@@ -23,6 +23,8 @@ const images = [
 
 const galleryRef = document.querySelector('ul.gallery');
 
-const galleryItems = images.map(({ url, alt }) => `<li><img src=${url} alt="${alt}"</li>`);
+const galleryItems = images
+  .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`)
+  .join('');
 
-galleryRef.insertAdjacentHTML('afterbegin', galleryItems.join(''));
+galleryRef.insertAdjacentHTML('afterbegin', galleryItems);
