@@ -15,5 +15,5 @@ const requiredInputTextLength = inputTextRef.dataset.length;
 
 inputTextRef.addEventListener('blur', event => {
   inputTextRef.classList =
-    event.currentTarget.value.length >= requiredInputTextLength ? 'valid' : 'invalid';
+    event.currentTarget.value.length.toString() === requiredInputTextLength ? 'valid' : 'invalid';
 });
