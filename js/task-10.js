@@ -31,10 +31,10 @@ destroyBtn.addEventListener('click', () => {
 function createBoxes(amount) {
   const boxesCollection = [];
 
-  for (let i = 1; i <= amount; i++) {
+  for (let i = 0; i < amount; i++) {
     const boxRef = document.createElement('div');
-    boxRef.style.width = `${30 + 10 * (i - 1)}px`;
-    boxRef.style.height = `${30 + 10 * (i - 1)}px`;
+    boxRef.style.width = `${30 + 10 * i}px`;
+    boxRef.style.height = `${30 + 10 * i}px`;
     boxRef.style.backgroundColor = getRandomHexColor();
 
     boxesCollection.push(boxRef);
