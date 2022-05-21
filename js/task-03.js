@@ -21,10 +21,17 @@ const images = [
   },
 ];
 
-const galleryRef = document.querySelector('ul.gallery');
+// const galleryRef = document.querySelector('ul.gallery');
 
-const galleryItems = images
-  .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`)
-  .join('');
+// const galleryItems = images
+//   .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`)
+//   .join('');
 
-galleryRef.insertAdjacentHTML('afterbegin', galleryItems);
+// galleryRef.insertAdjacentHTML('afterbegin', galleryItems);
+
+document
+  .querySelector('ul.gallery')
+  .insertAdjacentHTML(
+    'afterbegin',
+    images.map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`).join('')
+  );
