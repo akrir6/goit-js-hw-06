@@ -7,14 +7,22 @@
 
 const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
 
-const ingredientsList = document.querySelector('#ingredients');
-let ingredientsItems = [];
+// const ingredientsList = document.querySelector('#ingredients');
+// let ingredientsItems = [];
 
-ingredients.forEach(item => {
+// ingredients.forEach(item => {
+//   const listItem = document.createElement('li');
+//   listItem.textContent = item;
+//   listItem.classList.add('item');
+//   ingredientsItems.push(listItem);
+// });
+
+// ingredientsList.append(...ingredientsItems);
+
+
+document.querySelector('#ingredients').append(...ingredients.map(item=>{
   const listItem = document.createElement('li');
   listItem.textContent = item;
   listItem.classList.add('item');
-  ingredientsItems.push(listItem);
-});
-
-ingredientsList.append(...ingredientsItems);
+  return listItem;
+}));
